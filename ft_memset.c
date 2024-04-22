@@ -6,7 +6,7 @@
 /*   By: gacavali <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 12:19:21 by gacavali          #+#    #+#             */
-/*   Updated: 2024/04/22 12:21:25 by gacavali         ###   ########.fr       */
+/*   Updated: 2024/04/22 15:40:52 by gacavali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ void	*ft_memset(void *b, int c, size_t len)
 	while (i < len)
 	{
 		((unsigned char*) b)[i] = d;
-		write(1, &b[i], 1);
+		//write(1, &b[i], 1);
 		i++;
 	}
-	write(1, "\n", 1);
+	//write(1, "\n", 1);
 	return (b);
 }
 /*

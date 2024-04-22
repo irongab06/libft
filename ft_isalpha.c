@@ -8,10 +8,10 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
-
+/*
 int	main(void)
 {
 	printf("%i", isalpha('c'));
 	printf("%i",ft_isalpha('cq'));
 	return (0);
-}
+}*/

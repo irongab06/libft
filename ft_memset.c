@@ -1,6 +1,16 @@
-#include <stdio.h>
-#include <unistd.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gacavali <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/22 12:19:21 by gacavali          #+#    #+#             */
+/*   Updated: 2024/04/22 12:21:25 by gacavali         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {	
@@ -18,7 +28,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	write(1, "\n", 1);
 	return (b);
 }
-
+/*
 int	main(void)
 {
 	void	*b[20];
@@ -28,4 +38,4 @@ int	main(void)
 	memset(c, '8', 50);
 	printf("%s", (char *)c);
 	return (0);
-}
+}*/

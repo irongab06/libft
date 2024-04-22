@@ -7,22 +7,21 @@ ft_isdigit.c ft_isascii.c ft_isprint.c \
  ft_memcpy.c ft_atoi.c
 
 OBJ = $(SRC:.c=.o)
+
 OBJ_B = $(SRC_B:.c=.o)
+
 all: $(NAME)
     $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
-bonus:  $(NAME)
-    $(NAME): $(OBJ_B)
-	ar rcs $(NAME) $(OBJ_B)
 	
 .c.o:
 	$(CC) $(CFLAGS) -c $< -o $@
 so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
-	gcc -nostartfiles -shared -o libft.so $(OBJ)
+	$(CC) -fPIC $(CFLAGS) $(SRC)
+	gcc -shared -o libft.so $(OBJ)
 	
 clean:
-	rm -f $(OBJ_B)
+	rm -f $(OBJ)
 	
 fclean:	clean
 	rm -f $(NAME)

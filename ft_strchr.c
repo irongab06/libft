@@ -1,41 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gacavali <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/22 12:19:21 by gacavali          #+#    #+#             */
-/*   Updated: 2024/04/23 14:54:33 by gacavali         ###   ########.fr       */
+/*   Created: 2024/04/23 16:19:20 by gacavali          #+#    #+#             */
+/*   Updated: 2024/04/23 17:02:06 by gacavali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
-{	
-	size_t	i;
-	unsigned char	d;
+char	*ft_strchr(const char *s, int c)
+{
+	int	i;
+	char	d;
 
-	d = (int) c;
+	d = (char)c;
+
+	
 	i = 0;
-	while (i < n)
+	if (s[i] == '\0')
+		return (NULL); 
+	while (s[i] || d == '\0')
 	{
-		((unsigned char*) s)[i] = d;
-		//write(1, &b[i], 1);
+		if (s[i] == d)
+			return (&((char*)s)[i]);
 		i++;
 	}
-	//write(1, "\n", 1);
-	return (s);
+	return (NULL);
 }
-/*
-int	main(void)
-{
-	void	*b[20];
-	void	*c[20];
 
-	ft_memset(b, 'A', 50);
-	memset(c, '8', 50);
-	printf("%s", (char *)c);
-	return (0);
-}*/
+
+

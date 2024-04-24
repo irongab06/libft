@@ -14,7 +14,7 @@
 
 static size_t	ft_strlen_bis(const char *str)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (str[i])
@@ -26,7 +26,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	src_len;
-	
+
 	i = 0;
 	src_len = ft_strlen_bis(src);
 	if (dst && src && size)

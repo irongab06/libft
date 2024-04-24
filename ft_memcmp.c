@@ -14,10 +14,10 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int	i;
+	int				i;
 	unsigned char	*s11;
 	unsigned char	*s22;
-	
+
 	s11 = (unsigned char *)s1;
 	s22 = (unsigned char *)s2;
 	i = 0;
@@ -32,6 +32,4 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		}
 	}
 	return (0);
-
-	
-} 
+}

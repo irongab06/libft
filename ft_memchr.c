@@ -16,10 +16,10 @@ void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	c1;
 	unsigned char	*s1;
-	int	i;
-	
+	int				i;
+
 	i = 0;
-	s1 = (unsigned char*)s;
+	s1 = (unsigned char *)s;
 	c1 = (unsigned char)c;
 	while (n > 0)
 	{

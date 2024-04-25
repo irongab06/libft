@@ -42,6 +42,9 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	return (dest);
 }
 /*
+#include <stdio.h>
+
+
 int	main(void)
 {
 	char	dest[27];

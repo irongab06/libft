@@ -15,10 +15,12 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*s;
-	
-	s = NULL;
-	s = malloc(sizeof(void) * (count * size));
+
+	if ((count >= 65535 && size >= 65535) || count * size >= 65535)
+		return (NULL);
+	s =  malloc(size *count);
 	if (s == NULL)
-		return (0);
+		return (NULL);
+	ft_bzero(s, (count * size));
 	return (s);
 }

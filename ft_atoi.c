@@ -27,11 +27,8 @@ int	ft_atoi(const char *str)
 		i++;
 	while (str[i] == '+' || str[i] == '-')
 	{
-		if (str[i] == '-')
-		{
+		if (str[i] == '-' && ++count)
 			sign = sign * -1;
-			count ++;
-		}
 		if (str[i] == '+')
 			count ++;
 		if (count > 1)
@@ -39,10 +36,7 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	while (str[i] >= '0' && str[i] <= '9')
-	{
-		number = number * 10 + (str[i] - '0');
-		i++;
-	}
+		number = number * 10 + (str[i++] - '0');
 	return (number * sign);
 }
 /*

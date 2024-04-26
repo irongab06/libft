@@ -6,7 +6,7 @@
 /*   By: gacavali <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 13:10:03 by gacavali          #+#    #+#             */
-/*   Updated: 2024/04/23 14:13:14 by gacavali         ###   ########.fr       */
+/*   Updated: 2024/04/26 12:36:57 by gacavali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlen(const char *str)
 	size_t	i;
 
 	i = 0;
-	while (str[i])
+	while (str && str[i])
 	{
 		i++;
 	}

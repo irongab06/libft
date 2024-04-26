@@ -6,7 +6,7 @@
 /*   By: gacavali <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 09:47:56 by gacavali          #+#    #+#             */
-/*   Updated: 2024/04/26 11:28:33 by gacavali         ###   ########.fr       */
+/*   Updated: 2024/04/26 12:36:02 by gacavali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,13 @@ char    *ft_strtrim(char const *s1, char const *set)
     j = ft_strlen(s1);
     i = 0;
     l = 0;
-    new_s = NULL;
+	new_s = NULL;
+	if (set == 0 && s1 == 0)
+		return (NULL);
 	if (set == 0)
 		return (new_s = ft_strdup(s1));
-    if (s1 == 0)
-        return(new_s = ft_strdup(""));
+	if (s1 == 0)
+		return(new_s = ft_strdup(""));
     while (s1[i])
     {
 	while (set[l] && s1[i] != set[l])

@@ -9,7 +9,8 @@ ft_isdigit.c ft_isascii.c ft_isprint.c \
  ft_tolower.c ft_strchr.c ft_strrchr.c \
  ft_strncmp.c ft_memchr.c ft_memcmp.c \
  ft_strnstr.c ft_strdup.c ft_calloc.c \
- ft_substr.c ft_strjoin.c ft_strtrim.c 
+ ft_substr.c ft_strjoin.c ft_strtrim.c \
+ ft_split.c 
 
 OBJ = $(SRC:.c=.o)
 

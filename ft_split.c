@@ -6,7 +6,7 @@
 /*   By: gacavali <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 11:38:18 by gacavali          #+#    #+#             */
-/*   Updated: 2024/04/26 15:08:11 by gacavali         ###   ########.fr       */
+/*   Updated: 2024/04/26 15:49:51 by gacavali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ char	**ft_split(char const *s, char c)
 {
 	size_t	tab;
 	size_t	i;
-	size_t	j;
+	unsigned int	j;
 	char	**t;
 
 	i = 0;
@@ -58,34 +58,14 @@ char	**ft_split(char const *s, char c)
 	{
 		if (s[i] == c)
 		{
-			t[tab] = malloc(sizeof(char) * ((i - j) + 1));
-			if (t[tab] == NULL)
-				return (NULL);
-			i++;
-			j = (i - 1);
-			tab++;
-		}
-		else
-			i++;
-	}
-	i = 0;
-	while (s[i])
-	{	
-		if (s[i] != c)
-		{
-			t[tab][j] = s[i];
-			i++;
+			t[tab] = ft_substr(s ,j , (i - 1));
+			j = i;
 			j++;
-		}
-		else
-		{	
-			t[tab][j] = '\0';
 			tab++;
-			i++;
-			j = 0;
+			 
 		}
+		i++;
 	}
-	t[tab][j] = '\0';
 	return (t);
 		
 }

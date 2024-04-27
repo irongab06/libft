@@ -12,20 +12,38 @@
 
 #include "libft.h"
 
-static size_t	ft_count(char const *str)
+static size_t	ft_len_word(char const *s, char c, size_t i)
+{
+	size_t	j;
+
+	j = 0;
+	while (s[i] || s[i] == '\0')
+	{
+		if (s[i] == c || s[i] == '\0')
+			return (j);
+		else
+		{
+			i++;
+			j++;
+		}
+	}
+	return (j);
+}
+
+static size_t	ft_count(char const *str, char c)
 {
 	int	i;
 	int	inter;
-	size_t	word;
+	size_t			word;
 
 	i = 0;
 	inter = 0;
 	word = 0;
 	while (str[i])
 	{
-		if (str[i] >= 33 && str[i] <= 126)
+		if (str[i] != c)
 		{
-			if(inter == 0)
+			if (inter == 0)
 			{
 				inter = 1;
 				word++;
@@ -42,30 +60,36 @@ static size_t	ft_count(char const *str)
 
 char	**ft_split(char const *s, char c)
 {
-	size_t	tab;
+	size_t	tab_max;
+	size_t	tab_min;
 	size_t	i;
-	unsigned int	j;
+	unsigned int			j;
 	char	**t;
-
+	int	inter;
+	
+	inter = 0;
 	i = 0;
 	j = 0;
-	tab = ft_count(s);
-	t = malloc(sizeof(char*) * (tab + 1));
-	tab = 0;
+	tab_max = ft_count(s, c);
+	t = malloc(sizeof(char*) * (tab_max + 1));
+	tab_min = 0;
 	if (t == NULL)
-		return (NULL); 
-	while (s[i])
+		return (NULL);
+	while (tab_min < tab_max)
 	{
-		if (s[i] == c)
+		if (s[i] != c && inter == 0)
 		{
-			t[tab] = ft_substr(s ,j , (i - 1));
-			j = i;
-			j++;
-			tab++;
-			 
+			j = ft_len_word(s, c, i);
+			t[tab_min] = ft_substr(s, i, j);
+			i = i + j;
+			j = 0;
+			tab_min++;
+			inter = 1;
 		}
+		if (s[i] == c)
+			inter = 0;
 		i++;
 	}
+	t[tab_min] = NULL;
 	return (t);
-		
 }

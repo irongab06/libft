@@ -30,7 +30,7 @@ static char	*ft_putnbr_itoa(int n, char *s, size_t i)
 	s[i] = '\0';
 	return (s);
 }	
-char	*ft_itoa(int	n)
+char	*ft_itoa(int n)
 {
 	size_t	i;
 	char	*s;

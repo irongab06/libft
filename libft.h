@@ -52,4 +52,15 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 char	**ft_split(char const *s, char c);
 
+//--------------------------------------------------------------
+
+typedef struct	s_list
+{
+	void	*content;
+	struct s_list	*next;	
+}	t_list;
+
+t_list	*ft_lstnew_bonus(void *content);
+
+
 #endif

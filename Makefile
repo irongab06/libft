@@ -14,6 +14,8 @@ ft_isdigit.c ft_isascii.c ft_isprint.c \
  ft_putendl_fd.c ft_putnbr_fd.c ft_strmapi.c \
  ft_striteri.c ft_itoa.c 
 
+SRC_B = $(SRC) ft_lstnew_bonus.c
+
 OBJ = $(SRC:.c=.o)
 
 OBJ_B = $(SRC_B:.c=.o)
@@ -21,6 +23,10 @@ OBJ_B = $(SRC_B:.c=.o)
 all: $(NAME)
     $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
+
+bonus: $(NAME)
+     $(NAME: $(OBJ_B)
+       ar rcs $(NAME) $(OBJ_B)
 	
 .c.o:
 	$(CC) $(CFLAGS) -c $< -o $@

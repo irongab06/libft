@@ -44,6 +44,13 @@ char	*ft_itoa(int	n)
 	if (n < 0)
 	{
 		s[0] = '-';
+		if (n == -2147483648)
+		{
+			n = n - 1;
+			s = ft_putnbr_itoa(n, s, i);
+			s[i - 1] = '8';
+			return (s);
+		}	
 		n = n * (-1);
 	}
 	s = ft_putnbr_itoa(n, s, i);
@@ -53,6 +60,6 @@ char	*ft_itoa(int	n)
 /*
 int	main(void)
 {
-	printf("%s", ft_itoa(123545476575));
+	printf("%s", ft_itoa(-2147483648));
 	return (0);
 }*/

@@ -6,7 +6,7 @@
 /*   By: gacavali <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 14:47:19 by gacavali          #+#    #+#             */
-/*   Updated: 2024/04/24 14:52:03 by gacavali         ###   ########.fr       */
+/*   Updated: 2024/04/29 12:50:37 by gacavali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_calloc(size_t count, size_t size)
 
 	if ((count >= 65535 && size >= 65535) || count * size >= 65535)
 		return (NULL);
-	s =  malloc(size *count);
+	s = malloc(count * size);
 	if (s == NULL)
 		return (NULL);
 	ft_bzero(s, (count * size));

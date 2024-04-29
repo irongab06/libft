@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gacavali <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/29 15:21:55 by gacavali          #+#    #+#             */
+/*   Updated: 2024/04/29 15:23:26 by gacavali         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
 
-#include <stddef.h>
-#include <unistd.h>
-#include <stdlib.h>
+# include <stddef.h>
+# include <unistd.h>
+# include <stdlib.h>
 
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
@@ -25,16 +37,16 @@ size_t	ft_strlen(const char *str);
 
 //---------------------------------------------------------------
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n);
-int	ft_toupper(int c);
-int	ft_tolower(int c);
-int	ft_atoi(const char *str);
-int	ft_isalnum(int c);
-int	ft_isalpha(int c);
-int	ft_isascii(int c);
-int	ft_isdigit(int c);
-int	ft_isprint(int c);
-int	ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
+int		ft_atoi(const char *str);
+int		ft_isalnum(int c);
+int		ft_isalpha(int c);
+int		ft_isascii(int c);
+int		ft_isdigit(int c);
+int		ft_isprint(int c);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 //--------------------------------------------------------------
 
@@ -54,13 +66,12 @@ char	**ft_split(char const *s, char c);
 
 //--------------------------------------------------------------
 
-typedef struct	s_list
+typedef struct s_list
 {
-	void	*content;
+	void			*content;
 	struct s_list	*next;	
 }	t_list;
 
 t_list	*ft_lstnew(void *content);
-
 
 #endif

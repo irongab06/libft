@@ -6,7 +6,7 @@
 /*   By: gacavali <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 08:54:43 by gacavali          #+#    #+#             */
-/*   Updated: 2024/04/24 10:18:59 by gacavali         ###   ########.fr       */
+/*   Updated: 2024/04/29 15:09:00 by gacavali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int		i;
+	int				i;
 	unsigned char	*s11;
 	unsigned char	*s22;
 

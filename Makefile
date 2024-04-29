@@ -12,33 +12,31 @@ ft_isdigit.c ft_isascii.c ft_isprint.c \
  ft_substr.c ft_strjoin.c ft_strtrim.c \
  ft_split.c ft_putchar_fd.c ft_putstr_fd.c \
  ft_putendl_fd.c ft_putnbr_fd.c ft_strmapi.c \
- ft_striteri.c ft_itoa.c 
+ ft_striteri.c ft_itoa.c
 
-SRC_B = $(SRC) ft_lstnew_bonus.c
+SRC_BONUS = ft_lstnew_bonus.c
 
 OBJ = $(SRC:.c=.o)
 
-OBJ_B = $(SRC_B:.c=.o)
+OBJ_BONUS = $(SRC_BONUS:.c=.o)
 
 all: $(NAME)
-    $(NAME): $(OBJ)
+
+
+$(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
-bonus: $(NAME)
-     $(NAME: $(OBJ_B)
-       ar rcs $(NAME) $(OBJ_B)
+bonus: $(OBJ_BONUS)
+	ar rcs $(NAME) $(OBJ_BONUS)
 	
 .c.o:
 	$(CC) $(CFLAGS) -c $< -o $@
-so:
-	$(CC) -fPIC $(CFLAGS) $(SRC)
-	gcc -shared -o libft.so $(OBJ)
 	
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJ) $(OBJ_BONUS)
 	
 fclean:	clean
 	rm -f $(NAME)
 	
-re:	fclean all
+re:	fclean all bonus
 .PHONY: all clean fclean re

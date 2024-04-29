@@ -14,7 +14,7 @@ ft_isdigit.c ft_isascii.c ft_isprint.c \
  ft_putendl_fd.c ft_putnbr_fd.c ft_strmapi.c \
  ft_striteri.c ft_itoa.c
 
-SRC_BONUS = ft_lstnew_bonus.c
+SRC_BONUS = ft_lstnew.c
 
 OBJ = $(SRC:.c=.o)
 

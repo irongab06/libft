@@ -15,7 +15,8 @@ ft_isdigit.c ft_isascii.c ft_isprint.c \
  ft_striteri.c ft_itoa.c
 
 SRC_BONUS = ft_lstnew.c ft_lstadd_front.c \
- ft_lstsize.c
+ ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
+ ft_lstdelone.c
 
 OBJ = $(SRC:.c=.o)
 

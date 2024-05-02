@@ -6,7 +6,7 @@
 /*   By: gacavali <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 12:59:25 by gacavali          #+#    #+#             */
-/*   Updated: 2024/04/23 11:38:37 by gacavali         ###   ########.fr       */
+/*   Updated: 2024/05/01 15:56:05 by gacavali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_atoi(const char *str)
 		if (str[i] == '-' && ++count)
 			sign = sign * -1;
 		if (str[i] == '+')
-			count ++;
+			count++;
 		if (count > 1)
 			return (0);
 		i++;

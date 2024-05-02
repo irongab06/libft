@@ -6,7 +6,7 @@
 /*   By: gacavali <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 10:34:00 by gacavali          #+#    #+#             */
-/*   Updated: 2024/04/29 10:40:40 by gacavali         ###   ########.fr       */
+/*   Updated: 2024/05/01 13:33:57 by gacavali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ int	ft_lstsize(t_list *lst)
 
 	size = 0;
 	while (lst != NULL)
-	{	
+	{
 		lst = lst -> next;
 		++size;
-	}	
+	}
 	return (size);
 }

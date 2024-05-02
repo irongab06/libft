@@ -6,7 +6,7 @@
 /*   By: gacavali <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 15:21:55 by gacavali          #+#    #+#             */
-/*   Updated: 2024/05/01 12:26:18 by gacavali         ###   ########.fr       */
+/*   Updated: 2024/05/01 13:38:54 by gacavali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,6 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 
 //--------------------------------------------------------------
 
-int	ft_lstsize(t_list *lst);
+int		ft_lstsize(t_list *lst);
 
 #endif

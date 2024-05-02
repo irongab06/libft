@@ -6,15 +6,14 @@
 /*   By: gacavali <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 10:41:03 by gacavali          #+#    #+#             */
-/*   Updated: 2024/04/29 15:08:15 by gacavali         ###   ########.fr       */
+/*   Updated: 2024/05/01 13:32:12 by gacavali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-        new->next = *lst;
-        *lst = new;        
+	new->next = *lst;
+	*lst = new;
 }
-

@@ -6,7 +6,7 @@
 /*   By: gacavali <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 11:38:18 by gacavali          #+#    #+#             */
-/*   Updated: 2024/04/29 17:44:45 by gacavali         ###   ########.fr       */
+/*   Updated: 2024/05/01 16:04:43 by gacavali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ static size_t	ft_len_word(char const *s, char c, size_t i)
 	size_t	j;
 
 	j = 0;
-	while (s[i] || s[i] == '\0')
+	while (s[i])
 	{
-		if (s[i] == c || s[i] == '\0')
+		if (s[i] == c)
 			return (j);
 		else
 		{
@@ -92,6 +92,8 @@ char	**ft_split(char const *s, char c)
 	size_t	tab_max;
 	char	**t;
 
+	if (s == NULL)
+		return (NULL);
 	tab_max = ft_count(s, c);
 	t = malloc(sizeof(char *) * (tab_max + 1));
 	if (t == NULL)
